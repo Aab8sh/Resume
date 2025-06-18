@@ -1,0 +1,104 @@
+body {
+  font-family: "Georgia", serif;
+  background-color: #e0f7fa;
+  margin: 0;
+  padding: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1000px; /* Slightly reduced width for elegance */
+  margin: 0 auto;
+}
+
+.box {
+  background-color: #fff;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for elegant separation */
+}
+
+.box h2 {
+  border-bottom: 2px solid #00acc1;
+  margin-bottom: 12px;
+  color: #007c91;
+  font-size: 20px;
+}
+
+.box p {
+  margin: 8px 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.box ul {
+  padding-left: 20px;
+}
+
+.box ul li {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.box a {
+  color: #007c91;
+  text-decoration: none;
+}
+
+.box a:hover {
+  text-decoration: underline;
+}
+
+.skills-columns {
+  display: flex;
+  gap: 20px; /* Slight, balanced gap */
+}
+
+.skills-columns ul {
+  list-style-type: disc;
+  padding-left: 15px; /* gentle padding */
+  margin: 0;
+}
+
+.skills-columns ul li {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+#downloadBtn {
+  display: block;
+  margin: 30px auto 0;
+  padding: 10px 25px;
+  background-color: #00acc1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#downloadBtn:hover {
+  background-color: #007c91;
+}
+
+/* Hide button in PDF */
+@media print {
+  #downloadBtn {
+    display: none;
+  }
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  .skills-columns {
+    flex-direction: column;
+    gap: 0;
+  }
+}

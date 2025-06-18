@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aqua Blue Resume</title>
+    <link rel="stylesheet" href="sstyle.css" />
+  </head>
+  <body>
+    <div id="resume">
+      <div class="grid-container">
+        <div class="box name">
+          <h2>Aabish Hashmi</h2>
+          <p>
+            <strong>Contact:</strong> +91 95996 54479<br />
+            <strong>GitHub:</strong>
+            <a href="https://github.com/Aab8sh" target="_blank">Aab8sh</a><br />
+            <strong>Email:</strong>
+            <a href="mailto:aabish.hashmii@gmail.com"
+              >aabish.hashmii@gmail.com</a
+            ><br />
+            <strong>LinkedIn:</strong>
+            <a href="#" target="_blank">Aabish Hashmi</a>
+          </p>
+        </div>
+
+        <div class="box education">
+          <h2>Education</h2>
+          <ul>
+            <li>Class 10th - Bholiram Public School |2019-2020|</li>
+            <li>Diploma - Jamia Millia Islamia |2020-2023|</li>
+            <li>
+              B.Tech - Bharati Vidyapeeth College of Engg. |Pursuing 2022-2026 |
+            </li>
+          </ul>
+        </div>
+
+        <div class="box internship">
+          <h2>Internship</h2>
+          <ul>
+            <li>
+              BSES - High Voltage Maintenance | 08-07-2022 to 08-08-2022 |
+            </li>
+            <li>
+              GRAStech - Frontend Web Developer | 24-06-2024 to 05-08-2024 |
+            </li>
+          </ul>
+        </div>
+
+        <div class="box projects">
+          <h2>Projects</h2>
+          <ul>
+            <li>
+              Optical fiber data communication project for efficient signal
+              transmission.
+            </li>
+            <li>
+              Map-based workout tracker (Mapty App) using JavaScript &
+              Leaflet.js.
+            </li>
+            <li>
+              Website for Anya Residency –
+              <a href="https://www.anyaresidency.com/" target="_blank"
+                >anyaresidency.com</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="box certificates">
+          <h2>Certificates</h2>
+          <ul>
+            <li>Frontend Web Development - Udemy</li>
+            <li>Python Programming - Udemy</li>
+            <li>Winner - Projectathon (Confluence 4.0)</li>
+          </ul>
+        </div>
+
+        <div class="box skills">
+          <h2>Skills</h2>
+          <div class="skills-columns">
+            <ul>
+              <li>Frontend</li>
+              <li>Backend</li>
+              <li>DSA</li>
+              <li>Python</li>
+            </ul>
+            <ul>
+              <li>C++</li>
+              <li>Java</li>
+              <li>Content Writing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button id="downloadBtn" onclick="downloadPDF()">Download PDF</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script>
+      function downloadPDF() {
+        const element = document.getElementById("resume");
+        const opt = {
+          margin: 0,
+          filename: "resume.pdf",
+          image: { type: "jpeg", quality: 1 },
+          html2canvas: { scale: 2 },
+          jsPDF: { unit: "in", format: "a4", orientation: "portrait" },
+        };
+        html2pdf().set(opt).from(element).save();
+      }
+    </script>
+  </body>
+</html>
